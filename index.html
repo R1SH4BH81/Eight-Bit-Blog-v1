@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 
+    - primary meta tags
+  -->
+    <title>Wassup?!</title>
+    <meta name="title" content="Wassup?" />
+    <meta name="description" content="@eighty_one___" />
+
+    <!-- 
+    - favicon
+  -->
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header section" data-header>
+      <div class="container">
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="#" class="navbar-link hover:underline" data-nav-link
+                >Home</a
+              >
+            </li>
+
+            <li class="navbar-item">
+              <a href="#" class="navbar-link hover:underline" data-nav-link
+                >Recent Post</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="wrapper">
+          <button class="search-btn" aria-label="search" data-search-toggler>
+            <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+
+            <span class="span">Search</span>
+          </button>
+
+          <button
+            class="nav-toggle-btn"
+            aria-label="toggle menu"
+            data-nav-toggler
+          >
+            <span class="span one"></span>
+            <span class="span two"></span>
+            <span class="span three"></span>
+          </button>
+
+          <a href="https://rishabh81.netlify.app" class="btn">Me</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 
+    - #SEARCH BAR
+  -->
+
+    <div class="search-bar" data-search-bar>
+      <div class="input-wrapper">
+        <input
+          type="search"
+          name="search"
+          placeholder="Search"
+          class="input-field"
+        />
+
+        <button
+          class="search-close-btn"
+          aria-label="close search bar"
+          data-search-toggler
+        >
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+      </div>
+
+      <p class="search-bar-text">Please enter at least 3 characters</p>
+    </div>
+
+    <div class="overlay" data-overlay data-search-toggler></div>
+
+    <main>
+      <article>
+        <!-- 
+        - #HERO
+      -->
+
+        <section class="section hero" aria-label="home">
+          <div class="container">
+            <h1 class="h1 hero-title">
+              <strong class="strong">Wassup?</strong>Homies
+            </h1>
+
+            <div class="wrapper">
+              <form action="" class="newsletter-form">
+                <input
+                  type="email"
+                  name="email_address"
+                  placeholder="Your email address"
+                  class="email-field"
+                />
+
+                <button type="submit" class="btn">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- 
+        - #FEATURED POST
+      -->
+
+        <section class="section featured" aria-label="featured post">
+          <div class="container">
+            <p class="section-subtitle">
+              Get started with our <strong class="strong">best blogs</strong>
+            </p>
+
+            <ul class="has-scrollbar">
+              <li class="scrollbar-item">
+                <div class="blog-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 500; --height: 600"
+                  >
+                    <img
+                      src="./assets/images/appleLogo.jpeg"
+                      width="500"
+                      height="600"
+                      loading="lazy"
+                      alt="Apple Warns iPhone Users of Sophisticated Spyware Attacks"
+                      class="img-cover"
+                    />
+
+                    <ul class="avatar-list absolute">
+                      <li class="avatar-item">
+                        <a
+                          href="#"
+                          class="avatar img-holder"
+                          style="--width: 100; --height: 100"
+                        >
+                          <img
+                            src="./assets/images/me.jpg"
+                            width="100"
+                            height="100"
+                            loading="lazy"
+                            alt="Author"
+                            class="img-cover"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </figure>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li>
+                        <a class="card-tag">Apple</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">SpyWare</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Review</a>
+                      </li>
+                    </ul>
+
+                    <h3 class="h4">
+                      <a
+                        href="blogs/apple.html"
+                        class="card-title hover:underline"
+                      >
+                        Apple Warns iPhone Users of Sophisticated Spyware
+                        Attacks
+                      </a>
+                    </h3>
+
+                    <p class="card-text">
+                      Apple has been vigilant in notifying its iPhone users
+                      about a specific type of threat: mercenary spyware
+                      attacks. These warnings are distinct from common cyber
+                      threats and are aimed at unauthorized access to a user’s
+                      device.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="blog-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 500; --height: 600"
+                  >
+                    <img
+                      src="./assets/images/nvidiaLogo.jpeg"
+                      width="500"
+                      height="600"
+                      loading="lazy"
+                      alt="The Power Duo: NVIDIA and MediaTek"
+                      class="img-cover"
+                    />
+
+                    <ul class="avatar-list absolute">
+                      <li class="avatar-item">
+                        <a
+                          class="avatar img-holder"
+                          style="--width: 100; --height: 100"
+                        >
+                          <img
+                            src="./assets/images/me.jpg"
+                            width="100"
+                            height="100"
+                            loading="lazy"
+                            alt="Author"
+                            class="img-cover"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </figure>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li>
+                        <a class="card-tag">Nvidia</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Product</a>
+                      </li>
+                      <li>
+                        <a class="card-tag">Collaboration</a>
+                      </li>
+                    </ul>
+
+                    <h3 class="h4">
+                      <a
+                        href="blogs/mediatek.html"
+                        class="card-title hover:underline"
+                      >
+                        The Power Duo: NVIDIA and MediaTek
+                      </a>
+                    </h3>
+
+                    <p class="card-text">
+                      MediaTek and NVIDIA, have recently joined hands to
+                      redefine what our smartphones can do. Let’s explore this
+                      exciting partnership and its implications.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="blog-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 500; --height: 600"
+                  >
+                    <img
+                      src="./assets/images/nvidiaLive.jpeg"
+                      width="500"
+                      height="600"
+                      loading="lazy"
+                      alt="Nvidia Unveils Next-Generation AI Chips and Robotics Solutions"
+                      class="img-cover"
+                    />
+
+                    <ul class="avatar-list absolute">
+                      <li class="avatar-item">
+                        <a
+                          href="#"
+                          class="avatar img-holder"
+                          style="--width: 100; --height: 100"
+                        >
+                          <img
+                            src="./assets/images/me.jpg"
+                            width="100%"
+                            height="100%"
+                            loading="lazy"
+                            alt="Author"
+                            class="img-cover"
+                            size="fit"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </figure>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li>
+                        <a class="card-tag">Nividia</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Creative</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Robotics</a>
+                      </li>
+                    </ul>
+
+                    <h3 class="h4">
+                      <a href="#" class="card-title hover:underline">
+                        Nvidia Unveils Next-Generation AI Chips and Robotics
+                        Solutions
+                      </a>
+                    </h3>
+
+                    <p class="card-text">
+                      Nvidia introduces its groundbreaking AI chip, known as the
+                      Blackwell, heralded as the pinnacle of AI technology. With
+                      an astonishing 208 billion transistors, surpassing its
+                      predecessor twofold, the Black boasts a remarkable 30-fold
+                      increase in task performance speed.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="blog-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 500; --height: 600"
+                  >
+                    <img
+                      src="./assets/images/nueral.gif"
+                      width="500"
+                      height="600"
+                      loading="lazy"
+                      alt="Understanding Neural Networks"
+                      class="img-cover"
+                    />
+
+                    <ul class="avatar-list absolute">
+                      <li class="avatar-item">
+                        <a
+                          href="#"
+                          class="avatar img-holder"
+                          style="--width: 100; --height: 100"
+                        >
+                          <img
+                            src="./assets/images/me.jpg"
+                            width="100"
+                            height="100"
+                            loading="lazy"
+                            alt="Author"
+                            class="img-cover"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </figure>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li>
+                        <a class="card-tag">Nueral</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Future</a>
+                      </li>
+                    </ul>
+
+                    <h3 class="h4">
+                      <a href="#" class="card-title hover:underline">
+                        Neural networks
+                      </a>
+                    </h3>
+
+                    <p class="card-text">
+                      Neural networks are at the heart of modern machine
+                      learning and artificial intelligence. These computational
+                      models mimic the complex functions of the human brain,
+                      enabling tasks such as pattern recognition, decision
+                      making, and more.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 
+        - #RECENT POST
+      -->
+
+        <section class="section recent" aria-label="recent post">
+          <div class="container">
+            <div class="title-wrapper">
+              <h2 class="h2 section-title">
+                See what we’ve <strong class="strong">written lately</strong>
+              </h2>
+            </div>
+
+            <ul class="grid-list">
+              <li>
+                <div class="blog-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 550; --height: 660"
+                  >
+                    <img
+                      src="./assets/images/matrix.jpg"
+                      width="550"
+                      height="660"
+                      loading="lazy"
+                      alt="THE MATRIX"
+                      class="img-cover"
+                    />
+
+                    <ul class="avatar-list absolute">
+                      <li class="avatar-item"></li>
+
+                      <li class="avatar-item">
+                        <a
+                          class="avatar img-holder"
+                          style="--width: 100; --height: 100"
+                        >
+                          <img
+                            src="./assets/images/me.jpg"
+                            width="100"
+                            height="100"
+                            loading="lazy"
+                            alt="Author"
+                            class="img-cover"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </figure>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li>
+                        <a class="card-tag">Lifestyle</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">People</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Review</a>
+                      </li>
+                    </ul>
+
+                    <h3 class="h4">
+                      <a href="#" class="card-title hover:underline">
+                        THE MATRIX
+                      </a>
+                    </h3>
+
+                    <p class="card-text">
+                      he concept of the matrix has captivated our imaginations
+                      for decades, thanks to its portrayal in science fiction
+                      movies and literature. The idea of living in a simulated
+                      reality, where everything we experience is a carefully
+                      constructed illusion.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="blog-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 550; --height: 660"
+                  >
+                    <img
+                      src="./assets/images/flutter.jpg"
+                      width="550"
+                      height="660"
+                      loading="lazy"
+                      alt="Flutter"
+                      class="img-cover"
+                    />
+
+                    <ul class="avatar-list absolute">
+                      <li class="avatar-item">
+                        <a
+                          class="avatar img-holder"
+                          style="--width: 100; --height: 100"
+                        >
+                          <img
+                            src="./assets/images/me.jpg"
+                            width="100"
+                            height="100"
+                            loading="lazy"
+                            alt="Author"
+                            class="img-cover"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </figure>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li>
+                        <a class="card-tag">Design</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Flutter</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Revolution</a>
+                      </li>
+                    </ul>
+
+                    <h3 class="h4">
+                      <a href="#" class="card-title hover:underline">
+                        Flutter
+                      </a>
+                    </h3>
+
+                    <p class="card-text">
+                      The open-source UI software development kit (SDK) by
+                      Google, has rapidly emerged as a game-changer in mobile
+                      app development.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="blog-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 550; --height: 660"
+                  >
+                    <img
+                      src="./assets/images/nvidiaLive.gif"
+                      width="550"
+                      height="660"
+                      loading="lazy"
+                      alt="Nvidia CEO's Vision"
+                      class="img-cover"
+                    />
+
+                    <ul class="avatar-list absolute">
+                      <li class="avatar-item">
+                        <a
+                          class="avatar img-holder"
+                          style="--width: 100; --height: 100"
+                        >
+                          <img
+                            src="./assets/images/me.jpg"
+                            width="100"
+                            height="100"
+                            loading="lazy"
+                            alt="Author"
+                            class="img-cover"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </figure>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li>
+                        <a class="card-tag">Idea</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Nvidia</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Review</a>
+                      </li>
+                    </ul>
+
+                    <h3 class="h4">
+                      <a href="#" class="card-title hover:underline">
+                        Nvidia CEO's Vision
+                      </a>
+                    </h3>
+
+                    <p class="card-text">
+                      Nvidia CEO Jensen Huang has proposed a groundbreaking idea
+                      for the future of AI: using English as the universal
+                      coding language.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="blog-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 550; --height: 660"
+                  >
+                    <img
+                      src="./assets/images/blockChain.png"
+                      width="550"
+                      height="660"
+                      loading="lazy"
+                      alt="Understanding Blockchain"
+                      class="img-cover"
+                    />
+
+                    <ul class="avatar-list absolute">
+                      <li class="avatar-item">
+                        <a
+                          href="#"
+                          class="avatar img-holder"
+                          style="--width: 100; --height: 100"
+                        >
+                          <img
+                            src="./assets/images/me.jpg"
+                            width="100"
+                            height="100"
+                            loading="lazy"
+                            alt="Author"
+                            class="img-cover"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </figure>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li>
+                        <a class="card-tag">BlockChain</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Crypto</a>
+                      </li>
+                    </ul>
+
+                    <h3 class="h4">
+                      <a href="#" class="card-title hover:underline">
+                        Understanding Blockchain
+                      </a>
+                    </h3>
+
+                    <p class="card-text">
+                      It gained prominence through its role in cryptocurrency
+                      systems, its applications extend beyond digital
+                      currencies. Let’s delve into the fundamentals of
+                      blockchain technology.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="blog-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 550; --height: 660"
+                  >
+                    <img
+                      src="./assets/images/github.png"
+                      width="550"
+                      height="660"
+                      loading="lazy"
+                      alt="GitHub's Game-Changing Code Scanning "
+                      class="img-cover"
+                    />
+
+                    <ul class="avatar-list absolute">
+                      <li class="avatar-item">
+                        <a
+                          class="avatar img-holder"
+                          style="--width: 100; --height: 100"
+                        >
+                          <img
+                            src="./assets/images/me.jpg"
+                            width="100"
+                            height="100"
+                            loading="lazy"
+                            alt="Author"
+                            class="img-cover"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </figure>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li>
+                        <a class="card-tag">Github</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Development</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Innovation</a>
+                      </li>
+                    </ul>
+
+                    <h3 class="h4">
+                      <a href="#" class="card-title hover:underline">
+                        GitHub's Game-Changing Code Scanning
+                      </a>
+                    </h3>
+
+                    <p class="card-text">
+                      The introduction of Copilot-powered code scanning autofix
+                      represents a transformative stride in application
+                      security, harnessing the capabilities of GitHub Copilot
+                      and CodeQL.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="scrollbar-item">
+                <div class="blog-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 500; --height: 600"
+                  >
+                    <img
+                      src="./assets/images/appleLogo.jpeg"
+                      width="500"
+                      height="600"
+                      loading="lazy"
+                      alt="Apple Warns iPhone Users of Sophisticated Spyware Attacks"
+                      class="img-cover"
+                    />
+
+                    <ul class="avatar-list absolute">
+                      <li class="avatar-item">
+                        <a
+                          href="#"
+                          class="avatar img-holder"
+                          style="--width: 100; --height: 100"
+                        >
+                          <img
+                            src="./assets/images/me.jpg"
+                            width="100"
+                            height="100"
+                            loading="lazy"
+                            alt="Author"
+                            class="img-cover"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </figure>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li>
+                        <a class="card-tag">Apple</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">SpyWare</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Review</a>
+                      </li>
+                    </ul>
+
+                    <h3 class="h4">
+                      <a
+                        href="blogs/apple.html"
+                        class="card-title hover:underline"
+                      >
+                        Apple Warns iPhone Users of Sophisticated Spyware
+                        Attacks
+                      </a>
+                    </h3>
+
+                    <p class="card-text">
+                      Apple has been vigilant in notifying its iPhone users
+                      about a specific type of threat: mercenary spyware
+                      attacks. These warnings are distinct from common cyber
+                      threats and are aimed at unauthorized access to a user’s
+                      device.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="blog-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 500; --height: 600"
+                  >
+                    <img
+                      src="./assets/images/nvidiaLogo.jpeg"
+                      width="500"
+                      height="600"
+                      loading="lazy"
+                      alt="The Power Duo: NVIDIA and MediaTek"
+                      class="img-cover"
+                    />
+
+                    <ul class="avatar-list absolute">
+                      <li class="avatar-item">
+                        <a
+                          href="#"
+                          class="avatar img-holder"
+                          style="--width: 100; --height: 100"
+                        >
+                          <img
+                            src="./assets/images/me.jpg"
+                            width="100"
+                            height="100"
+                            loading="lazy"
+                            alt="Author"
+                            class="img-cover"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </figure>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li>
+                        <a class="card-tag">Nvidia</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Product</a>
+                      </li>
+                      <li>
+                        <a class="card-tag">Collaboration</a>
+                      </li>
+                    </ul>
+
+                    <h3 class="h4">
+                      <a
+                        href="blogs/mediatek.html"
+                        class="card-title hover:underline"
+                      >
+                        The Power Duo: NVIDIA and MediaTek
+                      </a>
+                    </h3>
+
+                    <p class="card-text">
+                      MediaTek and NVIDIA, have recently joined hands to
+                      redefine what our smartphones can do. Let’s explore this
+                      exciting partnership and its implications.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="blog-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 500; --height: 600"
+                  >
+                    <img
+                      src="./assets/images/nvidiaLive.jpeg"
+                      width="500"
+                      height="600"
+                      loading="lazy"
+                      alt="Nvidia Unveils Next-Generation AI Chips and Robotics Solutions"
+                      class="img-cover"
+                    />
+
+                    <ul class="avatar-list absolute">
+                      <li class="avatar-item">
+                        <a
+                          href="#"
+                          class="avatar img-holder"
+                          style="--width: 100; --height: 100"
+                        >
+                          <img
+                            src="./assets/images/me.jpg"
+                            width="100%"
+                            height="100%"
+                            loading="lazy"
+                            alt="Author"
+                            class="img-cover"
+                            size="fit"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </figure>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li>
+                        <a class="card-tag">Nividia</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Creative</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Robotics</a>
+                      </li>
+                    </ul>
+
+                    <h3 class="h4">
+                      <a href="#" class="card-title hover:underline">
+                        Nvidia Unveils Next-Generation AI Chips and Robotics
+                        Solutions
+                      </a>
+                    </h3>
+
+                    <p class="card-text">
+                      Nvidia introduces its groundbreaking AI chip, known as the
+                      Blackwell, heralded as the pinnacle of AI technology. With
+                      an astonishing 208 billion transistors, surpassing its
+                      predecessor twofold, the Black boasts a remarkable 30-fold
+                      increase in task performance speed.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="blog-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 500; --height: 600"
+                  >
+                    <img
+                      src="./assets/images/nueral.gif"
+                      width="500"
+                      height="600"
+                      loading="lazy"
+                      alt="Understanding Neural Networks"
+                      class="img-cover"
+                    />
+
+                    <ul class="avatar-list absolute">
+                      <li class="avatar-item">
+                        <a
+                          href="#"
+                          class="avatar img-holder"
+                          style="--width: 100; --height: 100"
+                        >
+                          <img
+                            src="./assets/images/me.jpg"
+                            width="100"
+                            height="100"
+                            loading="lazy"
+                            alt="Author"
+                            class="img-cover"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </figure>
+
+                  <div class="card-content">
+                    <ul class="card-meta-list">
+                      <li>
+                        <a class="card-tag">Nueral</a>
+                      </li>
+
+                      <li>
+                        <a class="card-tag">Future</a>
+                      </li>
+                    </ul>
+
+                    <h3 class="h4">
+                      <a href="#" class="card-title hover:underline">
+                        Neural networks
+                      </a>
+                    </h3>
+
+                    <p class="card-text">
+                      Neural networks are at the heart of modern machine
+                      learning and artificial intelligence. These computational
+                      models mimic the complex functions of the human brain,
+                      enabling tasks such as pattern recognition, decision
+                      making, and more.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 
+        - #RECOMMENDED POST
+      -->
+
+        <!-- 
+        - #NEWSLETTER
+      -->
+
+        <section class="section newsletter">
+          <h2 class="h2 section-title">
+            Subscribe to <strong class="strong">new posts</strong>
+          </h2>
+
+          <form action="" class="newsletter-form">
+            <input
+              type="email"
+              name="email_address"
+              placeholder="Your email address"
+              required
+              class="email-field"
+            />
+
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </section>
+      </article>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top section"></div>
+      </div>
+    </footer>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js" defer></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
