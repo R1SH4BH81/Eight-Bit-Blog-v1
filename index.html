@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
 
     <!-- 
     - primary meta tags
@@ -990,22 +993,33 @@
         - #NEWSLETTER
       -->
 
-        <section class="section newsletter">
+         <section class="section newsletter">
           <h2 class="h2 section-title">
             Subscribe to <strong class="strong">new posts</strong>
           </h2>
 
-          <form action="" class="newsletter-form">
-            <input
-              type="email"
-              name="email_address"
-              placeholder="Your email address"
-              required
-              class="email-field"
-            />
-
-            <button type="submit" class="btn">Subscribe</button>
-          </form>
+          <div>
+            <form id="newsletter-form" class="newsletter-form">
+              <label for="email_address" class="visually-hidden"
+                >Email address</label
+              >
+              <input
+                type="email"
+                id="email_address"
+                name="email_address"
+                placeholder="Your email address"
+                required
+                class="email-field"
+              />
+              <button
+                type="submit"
+                class="btn"
+                onclick="sendConfirmationEmail()"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
         </section>
       </article>
     </main>
@@ -1036,5 +1050,49 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script
+      src="https://cdn.emailjs.com/dist/email.min.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        emailjs.init("cT0I9fydyaMua-p7C"); // Initialize EmailJS with your user ID
+
+        document
+          .getElementById("newsletter-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Get the email address from the form
+            var email = document.getElementById("email_address").value;
+
+            // Send the email using EmailJS
+            emailjs
+              .send("service_aireyio", "template_cnp3zhu", {
+                email_address: email,
+              })
+              .then(function (response) {
+                console.log("SUCCESS!", response.status, response.text);
+                alert("Email sent successfully!");
+              })
+              .catch(function (error) {
+                console.error("FAILED...", error);
+                alert("Failed to send email. Please try again.");
+              });
+          });
+      });
+      function sendConfirmationEmail() {
+        // Simulate sending confirmation email
+        setTimeout(function () {
+          // Show SweetAlert confirmation message
+          Swal.fire({
+            title: "Confirmation Email Sent!",
+            text: "A confirmation email has been sent to your email address.",
+            icon: "success",
+            confirmButtonText: "Close",
+          });
+        }, 1000); // Simulate 1 second delay before showing the message
+      }
+    </script>
   </body>
 </html>
