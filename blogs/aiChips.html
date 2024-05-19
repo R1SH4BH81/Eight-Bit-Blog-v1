@@ -74,6 +74,65 @@
       .example .text {
         margin-bottom: 0;
       }
+      
+.comment-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.commentB{
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  float: right;
+  margin-right: 50px;
+}
+
+#comment-input {
+  width: 90%;
+  margin-bottom: 10px;
+  resize: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  border-left: 0.4em solid var(--accent-color-2);
+}
+
+#comment-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#comment-list li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.date {
+  font-size: 0.8em;
+  color: #888;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.delete-button {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.delete-button {
+  display: none;
+  
+}
 
       /* Inline Image Styling */
       .image--inline {
@@ -215,6 +274,12 @@
         consider flexbox or grid. If you're looking to spice up blocks of text
         with images or quotes, consider floats!
       </p>-->
+       <div class="comment-container">
+        <h2 style="text-align: center;">Comments</h2>
+        <ul id="comment-list"></ul>
+        <textarea id="comment-input" placeholder="Write your comment here..."></textarea>
+        <button class="commentB" onclick="postComment()">Post Comment</button>
+      </div>
 
       <div class="footer">
         <marquee
@@ -261,5 +326,78 @@
         </div>
       </div>
     </main>
+    <script>
+      // Listen for keydown event on the document
+document.addEventListener("keydown", function(event) {
+  // Check if Ctrl+E is pressed
+  if (event.ctrlKey && event.key === "e") {
+    // Show delete buttons
+    var deleteButtons = document.querySelectorAll(".delete-button");
+    deleteButtons.forEach(function(button) {
+      button.style.display = "inline-block";
+    });
+  } else {
+    // Hide delete buttons for other keys
+    var deleteButtons = document.querySelectorAll(".delete-button");
+    deleteButtons.forEach(function(button) {
+      button.style.display = "none";
+    });
+  }
+});
+
+// Function to post a comment
+function postComment() {
+  // Get the comment input value
+  var comment = document.getElementById("comment-input").value;
+
+  if (comment.trim() === "") {
+    alert("Please enter a comment.");
+    return;
+  }
+
+  // Create a new list item for the comment
+  var listItem = document.createElement("li");
+
+  // Add the comment text to the list item
+  listItem.textContent = comment;
+
+  // Create a new span element for the date
+  var dateSpan = document.createElement("span");
+  dateSpan.textContent = getCurrentDate(); // Function to get current date
+  dateSpan.classList.add("date");
+  listItem.appendChild(dateSpan);
+
+  // Create a new delete button
+  var deleteButton = document.createElement("button");
+  deleteButton.textContent = "Delete";
+  deleteButton.classList.add("delete-button");
+  deleteButton.onclick = function() {
+    deleteComment(listItem);
+  };
+  listItem.appendChild(deleteButton);
+
+  // Add the new comment to the comment list
+  var commentList = document.getElementById("comment-list");
+  commentList.appendChild(listItem);
+
+  // Clear the comment input field
+  document.getElementById("comment-input").value = "";
+}
+
+// Function to delete a comment
+function deleteComment(commentElement) {
+  commentElement.remove();
+}
+
+// Function to get current date
+function getCurrentDate() {
+  var now = new Date();
+  var day = String(now.getDate()).padStart(2, '0');
+  var month = String(now.getMonth() + 1).padStart(2, '0');
+  var year = String(now.getFullYear()).slice(-2);
+  return day + "." + month + "." + year;
+}
+
+    </script>
   </body>
 </html>
