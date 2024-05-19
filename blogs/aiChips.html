@@ -75,64 +75,6 @@
         margin-bottom: 0;
       }
       
-.comment-container {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-}
-.commentB{
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0);
-  color: white;
-  float: right;
-  margin-right: 50px;
-}
-
-#comment-input {
-  width: 90%;
-  margin-bottom: 10px;
-  resize: none;
-  background-color: rgba(255, 255, 255, 0);
-  color: white;
-  font-size: 20px;
-  border-radius: 10px;
-  border-left: 0.4em solid var(--accent-color-2);
-}
-
-#comment-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-#comment-list li {
-  margin-bottom: 10px;
-  
-  padding-bottom: 5px;
-  position: relative;
-}
-
-.date {
-  font-size: 0.8em;
-  color: #888;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.delete-button {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  background-color: #ff0000;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-.delete-button {
-  display: none;
-  
-}
 
       /* Inline Image Styling */
       .image--inline {
@@ -274,12 +216,7 @@
         consider flexbox or grid. If you're looking to spice up blocks of text
         with images or quotes, consider floats!
       </p>-->
-       <div class="comment-container">
-        <h2 style="text-align: center;">Comments</h2>
-        <ul id="comment-list"></ul>
-        <textarea id="comment-input" placeholder="Write your comment here..."></textarea>
-        <button class="commentB" onclick="postComment()">Post Comment</button>
-      </div>
+       
 
       <div class="footer">
         <marquee
@@ -326,84 +263,6 @@
         </div>
       </div>
     </main>
-    <script>
-// Function to post a comment
-// Function to post a comment
-function postComment() {
-  // Get the comment input value
-  var comment = document.getElementById("comment-input").value;
-
-  if (comment.trim() === "") {
-    alert("Please enter a comment.");
-    return;
-  }
-
-  // Create a new list item for the comment
-  var listItem = document.createElement("li");
-
-  // Add the comment text to the list item
-  listItem.textContent = comment;
-
-  // Create a new span element for the date
-  var dateSpan = document.createElement("span");
-  dateSpan.textContent = getCurrentDate(); // Function to get current date
-  dateSpan.classList.add("date");
-  listItem.appendChild(dateSpan);
-
-  // Add the new comment to the comment list
-  var commentList = document.getElementById("comment-list");
-  commentList.appendChild(listItem);
-
-  // Save comment to localStorage for persistence
-  saveCommentToLocalStorage(comment);
-
-  // Clear the comment input field
-  document.getElementById("comment-input").value = "";
-}
-
-// Function to save a comment to localStorage
-function saveCommentToLocalStorage(comment) {
-  var comments = JSON.parse(localStorage.getItem("comments")) || [];
-  comments.push(comment);
-  localStorage.setItem("comments", JSON.stringify(comments));
-}
-
-// Function to load comments from localStorage
-function loadCommentsFromLocalStorage() {
-  var comments = JSON.parse(localStorage.getItem("comments")) || [];
-  comments.forEach(function(comment) {
-    addCommentToList(comment);
-  });
-}
-
-// Function to add a comment to the list
-function addCommentToList(comment) {
-  var listItem = document.createElement("li");
-  listItem.textContent = comment;
-  var commentList = document.getElementById("comment-list");
-  commentList.appendChild(listItem);
-}
-
-// Load comments from localStorage when the page loads
-window.onload = function() {
-  loadCommentsFromLocalStorage();
-}
-
-// Function to delete a comment (not implemented for localStorage)
-function deleteComment(commentElement) {
-  commentElement.remove();
-}
-
-// Function to get current date
-function getCurrentDate() {
-  var now = new Date();
-  var day = String(now.getDate()).padStart(2, '0');
-  var month = String(now.getMonth() + 1).padStart(2, '0');
-  var year = String(now.getFullYear()).slice(-2);
-  return day + "." + month + "." + year;
-}
-
-
-    </script>
+ 
   </body>
 </html>
