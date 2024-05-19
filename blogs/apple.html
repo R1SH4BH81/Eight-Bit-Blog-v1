@@ -248,10 +248,32 @@
           >More Article : Apple Warns iPhone User |
           <a href="aiChips.html">Nvidia AI Chips</a> |
           <a href="nueralNet.html">Nueral Network</a> |<a href="matrix.html">
-            Matrix</a
-          >
-          |
+            Matrix</a>
+          
         </marquee>
+        <div class="counter" style="    display: flex;align-items: center;float: right;margin-top: 10px;
+        ">
+          <img src="/assets/images/eye.png" style="height: 25px;margin-right: 1px;" alt="Eye Icon">
+          <span id="viewCount">0</span>
+          <script>
+            // Function to increment the view count
+            function incrementCounter() {
+              // Retrieve current count from localStorage or initialize to 0 if not exists
+              let count = localStorage.getItem("viewCount") || 0;
+              // Increment count
+              count++;
+              // Store updated count in localStorage
+              localStorage.setItem("viewCount", count);
+              // Update the count displayed on the page
+              document.getElementById("viewCount").textContent = count;
+            }
+      
+            // Call incrementCounter function when the page loads
+            window.onload = function () {
+              incrementCounter();
+            };
+          </script>
+        </div>
       </div>
     </main>
   </body>
