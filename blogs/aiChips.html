@@ -328,6 +328,7 @@
     </main>
     <script>
 // Function to post a comment
+// Function to post a comment
 function postComment() {
   // Get the comment input value
   var comment = document.getElementById("comment-input").value;
@@ -371,11 +372,16 @@ function saveCommentToLocalStorage(comment) {
 function loadCommentsFromLocalStorage() {
   var comments = JSON.parse(localStorage.getItem("comments")) || [];
   comments.forEach(function(comment) {
-    var listItem = document.createElement("li");
-    listItem.textContent = comment;
-    var commentList = document.getElementById("comment-list");
-    commentList.appendChild(listItem);
+    addCommentToList(comment);
   });
+}
+
+// Function to add a comment to the list
+function addCommentToList(comment) {
+  var listItem = document.createElement("li");
+  listItem.textContent = comment;
+  var commentList = document.getElementById("comment-list");
+  commentList.appendChild(listItem);
 }
 
 // Load comments from localStorage when the page loads
@@ -396,6 +402,7 @@ function getCurrentDate() {
   var year = String(now.getFullYear()).slice(-2);
   return day + "." + month + "." + year;
 }
+
 
     </script>
   </body>
