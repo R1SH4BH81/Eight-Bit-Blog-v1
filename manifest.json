@@ -6,6 +6,10 @@
   "display": "standalone",
   
   "icons": [
+    {
+      "src": "/assets/images/icon.ico",
+     "type": "image/x-icon"
+    },
    
     {
       "src": "/assets/images/icon.png",
