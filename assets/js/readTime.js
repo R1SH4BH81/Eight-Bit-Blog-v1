@@ -14,5 +14,5 @@ document.addEventListener("DOMContentLoaded", function () {
   // Update the HTML with the read time estimate
   var readTimeElement = document.getElementById("read-time");
   readTimeElement.textContent =
-    "Est read time: " + readTime + " min(s)";
+    "read time: " + readTime + " min(s)";
 });
