@@ -21,8 +21,8 @@ This blog application is built using **React** and **Tailwind CSS**, with **Fire
 - **Admin Approval**: Every blog post requires admin approval before it goes live, ensuring that false or hateful information is filtered out.
 
 ## Usage
-** Creating a Post **: Navigate to the dashboard and click on "Create Post". Fill in the necessary details and submit the post for admin approval.
+- **Creating a Post**: Navigate to the dashboard and click on "Create Post". Fill in the necessary details and submit the post for admin approval.
 
-** Viewing Posts **: Explore featured, trending, and all-time high posts from the home page.
+- **Viewing Posts**: Explore featured, trending, and all-time high posts from the home page.
 
-** Sharing Posts **: Click on the share button under any post to share it on your favorite social media platform.
+- **Sharing Posts**: Click on the share button under any post to share it on your favorite social media platform.
